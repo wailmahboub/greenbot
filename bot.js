@@ -195,5 +195,29 @@ if (!channel) return;
 channel.send({embed : embed});
 });
 
+client.on('messageUpdate', (oldMessage, newMessage) => {
+    if (newMessage.content.toUpperCase().match(/DISCORD.GG/i)) {
+        if (newMessage.member.hasPermission("ADMINISTRATOR")) return;
+        newMessage.delete().catch(msg=>{});
+        var Invites  = new Discord.RichEmbed()
+          .setFooter('Berserker', client.user.avatarURL)
+          .setDescription(`<@${newMessage.author.id}> Has Tried To Send Invites`)
+          .setTimestamp()
+          .setColor(`RED`)
+        newMessage.channel.sendEmbed(Invites);
+    }
+});
+  client.on('message' , message => {
+    if(message.content.toUpperCase().match(/DISCORD.GG/i)) {
+        if (message.member.hasPermission("ADMINISTRATOR")) return;
+      message.delete().catch(msg=>{});
+      var Invites  = new Discord.RichEmbed()
+        .setFooter('Berserker', client.user.avatarURL)
+        .setDescription(`<@${message.author.id}> Has Tried To Send Invites`)
+        .setTimestamp()
+        .setColor(`RED`)
+        message.channel.sendEmbed(Invites);
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
