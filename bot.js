@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "$";
 
@@ -11,7 +11,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`$bc | $help FoxBot`,"http://twitch.tv/Death Shop")
+client.user.setGame(`=bc |Wail Broadcast`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -183,42 +183,6 @@ client.on("message", message => { //clear
        
 });
 
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setThumbnail(member.user.avatarURL)
-  .addField("***شكرا الانضمامك الينا***" ,member.user.username )
-    .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
-    .setColor('RANDOM')
-    .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
-var channel =member.guild.channels.find('name', 'ｗｅｌｃｏｍｅ')
-if (!channel) return;
-channel.send({embed : embed});
-});
-
-client.on('messageUpdate', (oldMessage, newMessage) => {
-    if (newMessage.content.toUpperCase().match(/DISCORD.GG/i)) {
-        if (newMessage.member.hasPermission("ADMINISTRATOR")) return;
-        newMessage.delete().catch(msg=>{});
-        var Invites  = new Discord.RichEmbed()
-          .setFooter('Berserker', client.user.avatarURL)
-          .setDescription(`<@${newMessage.author.id}> Has Tried To Send Invites`)
-          .setTimestamp()
-          .setColor(`RED`)
-        newMessage.channel.sendEmbed(Invites);
-    }
-});
-  client.on('message' , message => {
-    if(message.content.toUpperCase().match(/DISCORD.GG/i)) {
-        if (message.member.hasPermission("ADMINISTRATOR")) return;
-      message.delete().catch(msg=>{});
-      var Invites  = new Discord.RichEmbed()
-        .setFooter('Berserker', client.user.avatarURL)
-        .setDescription(`<@${message.author.id}> Has Tried To Send Invites`)
-        .setTimestamp()
-        .setColor(`RED`)
-        message.channel.sendEmbed(Invites);
-    }
-});
 
 
 client.login(process.env.BOT_TOKEN);
