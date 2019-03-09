@@ -283,14 +283,12 @@ client.on('message',async message => {//new msg event
 if(!message.channel.guild) return;
  if(message.content.startsWith(prefix + 'Rainbow')) {//to create the rainbow role
    let role = message.guild.roles.find('name', 'Rainbow Rank')
-   if(role) return message.channel.send(هاي الرتبة موجودة !)//if the role already created return with this msg
- //start of create role 
+   if(role) return message.channel.send(هاي الرتبة موجودة !)//if the role already created return with this msg//start of create role 
  if(!role){
    rainbow =  message.guild.createRole({
   name: "Rainbow Rank",//the role will create name
   color: "#000000",//the default color
-  permissions:[]//the permissions
-//end of create role
+  permissions:[]//the permissions//end of create role
 })
 
 }
