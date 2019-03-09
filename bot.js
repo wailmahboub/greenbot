@@ -148,14 +148,14 @@ client.on("message", async message => {
         let help = new Discord.RichEmbed()
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
-            .setDescription(`**__برودكاست بوت | Version 1.1__ 
+            .setDescription(`**__FoxBot Brodcast Help__ 
 
             برودكاست عادي : ${prefix}bc
             دعوة البوت لسيرفرك : ${prefix}invite
             معلومات عن السيرفر : ${prefix}server
             برودكاست للأونلاين فقط : ${prefix}bco
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/wxvC8qh
+            FoxBot Support : https://discord.gg/wxvC8qh
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
