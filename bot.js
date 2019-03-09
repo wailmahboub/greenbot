@@ -313,38 +313,7 @@ EpicEdiTeD[message.author.id].Money+= 0.25;
 
 
 
-Client.on( "message", Message => {
-    if( Message.author.bot )
-        return;
-       
-    if( Message.content.toLowerCase( ).startsWith( "$color" ) && ( Message.channel.type == "text" ) ) {
-        let szArguments = Message.content.toLowerCase( ).split( " " ).slice( 1 );
-        Message.delete( );
-   
-        if( szArguments.length < 1 ) {
-            Message.channel.send( "Missing argument!" );
-            Message.channel.send( "Example commad: $color #3399ff" );
-            return;
-        }
-       
-        if( /^#[0-9A-F]{6}$/i.test( szArguments[ 0 ] ) ) {
-            if( Message.member.roles.find( "name", `USER-COLOR-${Message.member.id}` ) ) {
-                Message.member.role.find( "name", "USER-COLOR-" + Message.member.id ).setColor( szArguments[ 0 ] );
-            } else {
-                Message.guild.createRole( {
-                    name: "USER-COLOR-" + Message.member.id,
-                    color: szArguments[ 0 ]
-                } ).then( ( Role ) => {
-                    Role.setPermissions( [ ] );
-                    Message.member.addRole( Role );
-                } );
-               
-                Message.channel.send( "Your nickname color has been changed to: " + szArgments[ 0 ] );
-            } else Message.channel.send( "Invalid color code, use HTML color codes!  > Example:#FFFFFF" );
-        }
-    }
-} );
- 
+
 
 
 client.login(process.env.BOT_TOKEN);
