@@ -193,7 +193,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField('🎽 | name :  ',`${member}`)
-        .addField('📢 | Mer7ba Bok F Server' , `Welcome to the server, ${member}`)
+        .addField('📢 | Mer7ba Bik F Server' , `Welcome to the server, ${member}`)
         .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                
