@@ -138,7 +138,7 @@ client.on("message", async message => {
             .setColor("RANDOM")
             .setAuthor(message.author.username, message.author.displayAvatarURL)
             .setThumbnail(message.author.avatarURL)
-            .setTitle("**اضغط هنا لادخال فوكس بوت على سيرفرك :sparkling_heart:**")
+            .setTitle("**Click Here To Invite The Bot To Your Server :sparkling_heart:**")
             .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
             message.channel.sendEmbed(invite);
     }
