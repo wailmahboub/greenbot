@@ -630,7 +630,7 @@ client.on('message',async msg => {
 Year = currentTime.getFullYear(),  
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`${client.user.tag}`);
+      time.setName(`${server.user.tag}`);
  },1000);
   });
   msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
@@ -643,7 +643,7 @@ Dat = currentTime.getDate()
 Year = currentTime.getFullYear(),
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`${client.users.size} <-- 『الاعضاء』 `);
+      time.setName(`${server.users.size} <-- 『الاعضاء』 `);
  },1000);
   });
     msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
@@ -656,7 +656,7 @@ Dat = currentTime.getDate()
 Year = currentTime.getFullYear(),
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`${client.channels.size} <-- 『الرومات』 `);
+      time.setName(`${server.channels.size} <-- 『الرومات』 `);
  },1000);
   });
     msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
@@ -669,7 +669,7 @@ Dat = currentTime.getDate()
 Year = currentTime.getFullYear(),
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`${client.guilds.size} <-- 『السيرفرات』 `);
+      time.setName(`${server.guilds.size} <-- 『السيرفرات』 `);
  },1000);
   });
      msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
