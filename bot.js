@@ -671,12 +671,11 @@ if(!role) return;
 
 
 
-
-var prefix = "$";
+var prefix = "%";
 client.on('message',async message => {//new msg event
 if(!message.channel.guild) return;
  if(message.content.startsWith(prefix + 'Rainbow')) {//to create the rainbow role
-   let role = message.guild.roles.find('name', 'Rainbow')
+   let role = message.guild.roles.find('name', 'Rainbow Rank')
    if(role) return message.channel.send(هاي الرتبة موجودة !)//if the role already created return with this msg
  //start of create role 
  if(!role){
@@ -693,7 +692,7 @@ message.channel.send('تم')//if the step completed
 client.on('ready', () => {//new ready event
  setInterval(function(){
      client.guilds.forEach(g => {
-                 var role = g.roles.find('name', 'Rainbow');//rainbow role name
+                 var role = g.roles.find('name', 'Rainbow Rank');//rainbow role name
                  if (role) {
                      role.edit({color : "RANDOM"});
                  };
