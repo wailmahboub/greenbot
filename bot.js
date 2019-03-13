@@ -666,6 +666,19 @@ if(!role) return;
          }, 1700)
 });
 
+client.on("ready", () => {
+ 
+     var guild = client.guilds.get('449969300959133696');
+         setInterval(function(){
+var role = guild.roles.find(role=> role.name === 'rainbow');
+if(!role) return;
+             role.edit({
+                 color : "RANDOM"
+             });
+         }, 1700)
+});
+
+
 
 
 
