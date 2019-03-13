@@ -654,6 +654,26 @@ client.on('message', message => {
 
 
 
+  client.on("ready", () => {
+ 
+     var guild = client.guilds.get('551390324640186368');
+         setInterval(function(){
+var role = guild.roles.find(role=> role.name === 'rainbow');
+if(!role) return;
+             role.edit({
+                 color : "RANDOM"
+             });
+         }, 1700)
+});
+
+
+
+
+
+
+
+
+
 
 
 
