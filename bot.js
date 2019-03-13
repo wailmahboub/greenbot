@@ -614,15 +614,79 @@ message.channel.sendEmbed(embed).then();
 
 
 
-const bot = require('discord.js-musicbot-addon');
-
-bot.start(client, {
-  youtubeKey: "AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8",
-  musichelp : "$help",
- botPrefix : "$"
+client.on('message',async msg => {
+  if(msg.content.startsWith("!stats")) {
+  if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **لا تملك صلاحية**');
+  if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
+    msg.guild.createChannel(`👑معلومات البوت👌` , 'category')
+ 
+       msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),  
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+      time.setName(`${client.user.tag}`);
+ },1000);
+  });
+  msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+      time.setName(`${client.users.size} <-- 『الاعضاء』 `);
+ },1000);
+  });
+    msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+      time.setName(`${client.channels.size} <-- 『الرومات』 `);
+ },1000);
+  });
+    msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+      time.setName(`${client.guilds.size} <-- 『السيرفرات』 `);
+ },1000);
+  });
+     msg.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),  
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+      time.setName(`${prefix} <-- 『البرفكس』 `);
+ },1000);
+  });
+}
 });
-
-
 
 
 
