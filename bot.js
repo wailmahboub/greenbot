@@ -161,7 +161,7 @@ client.on("message", async message => {
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             -------------------------------------
             رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
-            -------------------------------------
+                                                    FoxBot System
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
