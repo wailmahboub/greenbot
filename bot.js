@@ -160,6 +160,7 @@ client.on("message", async message => {
             -------------------------------------
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             -------------------------------------
+            للعب بعبة الصراحة هناك العديد من الاسالة : ${prefix}sara7a
             رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
             FoxBot System: Owned By Wail Mahboub
             **`);
@@ -786,8 +787,8 @@ const Sra7a = [
             'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
        ]
           client.on('message', message => {
-			  	var prefix = "*"
-        if (message.content.startsWith(prefix + 'صراحه')) {
+			  	var prefix = "$"
+        if (message.content.startsWith(prefix + 'sara7a')) {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
          var client= new Discord.RichEmbed()
          .setTitle("Alpha")
