@@ -138,7 +138,7 @@ client.on("message", async message => {
             .setColor("RANDOM")
             .setAuthor(message.author.username, message.author.displayAvatarURL)
             .setThumbnail(message.author.avatarURL)
-            .setTitle("**Click Here To Invite The Bot To Your Server :sparkling_heart:**")
+            .setTitle("**اضغط هنا لادخال فوكس بوت على سيرفرك :sparkling_heart:**")
             .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
             message.channel.sendEmbed(invite);
     }
@@ -161,7 +161,7 @@ client.on("message", async message => {
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             -------------------------------------
             رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
-                                                    FoxBot System
+            FoxBot System: Owned By Wail Mahboub
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
