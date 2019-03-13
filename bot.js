@@ -615,6 +615,58 @@ message.channel.sendEmbed(embed).then();
 
 
 
+client.on("message", msg=>{
+if( msg.content.startsWith(`${prefix}bot`)){ // الامر (bot)
+  if(!msg.channel.guild) return msg.reply('** This command only for servers **');
+ if (msg.author.bot) return;
+var api = `${Math.round(client.ping)}`
+    let uptime = client.uptime; let days = 0; let hours = 0; let minutes = 0; let seconds = 0; let notCompleted = true;
+while (notCompleted) {
+  if (uptime >= 8.64e+7) {
+      days++;
+      uptime -= 8.64e+7;
+  } else if (uptime >= 3.6e+6) {
+      hours++;
+      uptime -= 3.6e+6;
+  } else if (uptime >= 60000) {
+      minutes++;
+      uptime -= 60000;
+  } else if (uptime >= 1000) {
+      seconds++;
+      uptime -= 1000;
+  }
+  if (uptime < 1000) notCompleted = false;
+}
+moment.locale("en-ca")
+let embedbot = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(`${botName}`,`${urlbot}`)
+.setThumbnail(`${urlbot}`)
+.addField('🔰 **Bot Name** :' , `[ ${client.user.tag} ]` , true)
+.addField(':trident: **Bot Owner** :' , `[<@479668224649199617>]` , true)
+.addField(`:earth_africa: Servers online`,client.guilds.size, true)
+.addField(`:busts_in_silhouette: Members`,client.users.size, true)
+.addField(`:love_letter: Channel online`,client.channels.size, true)
+.addField(`:incoming_envelope: Ping Bot`, `${api}`,true)
+.addField(`:paperclip: Prefix`, `${prefix}`,true)
+.addField(`:id: Id`, `${client.user.id}`,true)
+.addField(`:scales: RamUsage`, `${(process.memoryUsage().rss / 1048576).toFixed()}MB`,true)
+.addField(`:hammer_pick: Node.js Version`, `${process.version}`,true)
+.addField(`:stopwatch: CreatedAt`, `${moment(client.user.createdAt).fromNow()}`,true)
+.addField(`:alarm_clock: Uptime`, `${days}:${hours}:${minutes}:${seconds}`,true)
+.setTimestamp()
+.setFooter(client.user.username,client.user.displayAvatarURL)
+msg.reply(embedbot);
+}});
+
+
+
+
+
+
+
+
+
 
 
 
