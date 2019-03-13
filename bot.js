@@ -161,6 +161,7 @@ client.on("message", async message => {
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             -------------------------------------
             للعب بعبة الصراحة هناك العديد من الاسالة : ${prefix}sara7a
+            -------------------------------------
             رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
             FoxBot System: Owned By Wail Mahboub
             **`);
