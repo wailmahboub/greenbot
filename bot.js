@@ -615,7 +615,7 @@ message.channel.sendEmbed(embed).then();
 
 
 client.on('message',async msg => {
-  if(msg.content.startsWith("!stats")) {
+  if(msg.content.startsWith("$stats")) {
   if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **لا تملك صلاحية**');
   if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
     msg.guild.createChannel(`👑معلومات البوت👌` , 'category')
