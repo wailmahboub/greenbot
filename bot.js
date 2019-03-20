@@ -817,7 +817,7 @@ const Sra7a = [
 
 client.on('message', puz => {
     if (puz.content == "$games") {
-        var x = ["https://f.top4top.net/p_1169dw8521.png",
+        var x = ["https://f.top4top.net/p_1174dgh8d1.png",
 "https://e.top4top.net/p_1169in6a31.png",
 "https://f.top4top.net/p_1169ee7gw2.png",
 "https://a.top4top.net/p_1169mgboh3.png",
