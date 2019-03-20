@@ -149,8 +149,8 @@ client.on("message", async message => {
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
-
-           ` برودكاست عادي : ${prefix}bc  
+    
+            برودكاست عادي : ${prefix}bc  
             -------------------------------------
             دعوة البوت لسيرفرك : ${prefix}invite
             -------------------------------------
@@ -160,12 +160,15 @@ client.on("message", async message => {
             -------------------------------------
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             -------------------------------------
+                           ' الالعاب'
+            -------------------------------------
             للعب بعبة الصراحة هناك العديد من الاسالة : ${prefix}sara7a
             -------------------------------------
             لعبة صور العاب وانت قول إسمها  :${prefix}games
             -------------------------------------
             رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
-            FoxBot System `
+            ------------------------------------
+            FoxBot System 
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
