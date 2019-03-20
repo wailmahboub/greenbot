@@ -160,8 +160,8 @@ client.on("message", async message => {
             -------------------------------------
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
             -------------------------------------
+            رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
             ------------- العاب -----------------
-            -------------------------------------
             للعب بعبة الصراحة هناك العديد من الاسالة : ${prefix}sara7a
             -------------------------------------
             لعبة صور العاب وانت قول إسمها  :${prefix}games
@@ -878,7 +878,71 @@ client.on('message', puz => {
 
 
 
+client.on('message', fkk => {
+    if (fkk.content == "$programs") {
+        var x = ["المتاح للجميع لا يتاح لي",
+"https://b.top4top.net/p_1164oe5tp1.jpg",
+"https://c.top4top.net/p_1164jqp402.png",
+"https://d.top4top.net/p_1164kjqt13.jpg",
+"https://e.top4top.net/p_1164qljfs4.png",
+"https://f.top4top.net/p_1164y0w3x5.jpg",
+"https://e.top4top.net/p_1164r89w31.png",
+"https://a.top4top.net/p_1164op08s3.jpg",
+"https://b.top4top.net/p_11641d5sl4.png",
+"https://c.top4top.net/p_1164u1nmr5.jpg",
+"https://b.top4top.net/p_1164eph0n1.jpg",
+"https://c.top4top.net/p_1164uj2802.jpg",
+"https://d.top4top.net/p_116466p0l3.jpg",
+"https://e.top4top.net/p_1164vosgi4.jpg",
+"https://f.top4top.net/p_11649i6xv5.jpg",
+"https://a.top4top.net/p_1164sozlg6.png",
+];
+        var x2 = ['',
+		"فوتوشوب",
+		"ديسكورد",
+		"برو بوت",
+		"فيس بوك",
+		"ثعلب النار",
+		"فايلزيلا",
+		"باندي كام",
+		"ميوزكلى",
+		"يوتيوب",
+		"كلاش واف كلانس",
+		"واتس اب",
+		"ماسنجر",
+		"انستقرام",
+		"جوجل",
+		"تويتر",
+        
+        
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        fkk.channel.send(`╔════════【۩ **__برنامج__** ۩】════════╗
 
+***${x[x3]}***
+
+=====================================
+
+**__لديك 15 ثانية للاجابة __**
+╚═════════════════════════════╝`).then(msg1=> {
+            var r = fkk.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['https://cdn.discordapp.com/attachments/429330153735454722/430040652542246912/bbcb4aa9853bf1d2.png']
+            })
+        r.catch(() => {
+            return fkk.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            fkk.channel.send(`${collected.first().author} اجايه صحيح :white_check_mark: `);
+        })
+        })
+    }
+})
 
 
 
