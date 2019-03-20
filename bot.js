@@ -815,7 +815,54 @@ const Sra7a = [
 
 
 
-
+client.on('message', puz => {
+    if (puz.content == "$games") {
+        var x = ["https://f.top4top.net/p_1169dw8521.png",
+"https://e.top4top.net/p_1169in6a31.png",
+"https://f.top4top.net/p_1169ee7gw2.png",
+"https://a.top4top.net/p_1169mgboh3.png",
+"https://b.top4top.net/p_1169q1cq14.png",
+"https://c.top4top.net/p_1169clnyc5.png",
+"https://d.top4top.net/p_1169hpgrq6.png",
+"https://e.top4top.net/p_116906rsa7.png",
+"https://f.top4top.net/p_1169ije9g8.png",
+"https://a.top4top.net/p_1169wt3369.png",
+];
+        var x2 = ['blur',
+        "Creative Destruction",
+        "Fortnite",
+        "Gta IV",
+        "Gta V",
+        "Gta Sa",
+        "Minecraft",
+        "Outlast",
+        "Outlast2",
+        "Residentevil7",
+       
+       
+       
+       
+        ];
+       
+        var x3 = Math.floor(Math.random()*x.length)
+        puz.channel.send(`السؤال هو:  __**${x[x3]}**__
+**لديك 15 ثانية للإجابة**`).then(msg1=> {
+            var r = puz.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 15000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return puz.channel.send(`:negative_squared_cross_mark: **لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح**
+            `)
+        })
+       
+        r.then((collected)=> {
+            puz.channel.send(`${collected.first().author} **إجابة صحيحة** :white_check_mark:   `);
+        })
+        })
+    }
+})
 
 
 
