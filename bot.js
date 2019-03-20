@@ -144,7 +144,7 @@ client.on("message", async message => {
     }
 });
 client.on("message", message => {
- if (message.content === "f!help") {
+ if (message.content === "$help") {
   const embed = new Discord.RichEmbed() 
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
