@@ -824,7 +824,7 @@ client.on("message", (message) => {
  .setThumbnail(client.user.avatarURL)     
  .setDescription("Add me" + `
  **
-رابط البوت | https://goo.gl/87T4XW
+رابط البوت |https://discordapp.com/api/oauth2/authorize?client_id=553319466189193248&permissions=8&scope=bot
  **
 `);
   message.author.sendEmbed(embed);
@@ -841,7 +841,7 @@ client.on("message", (message) => {
  .setThumbnail(client.user.avatarURL)     
  .setDescription(" ***welcome To server support*** " + `
  **
-رابط السيرفر | https://discord.gg/sn8bVUY
+رابط السيرفر | https://discord.gg/wxvC8qh
  **
 `);
   message.author.sendEmbed(embed);
@@ -12522,6 +12522,15 @@ message.member.addRole(message.guild.roles.find("name", "100"));
   }
 	
 });
+
+
+
+
+
+
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
