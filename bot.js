@@ -150,7 +150,7 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
 
-            برودكاست عادي : ${prefix}bc
+      **   برودكاست عادي : ${prefix}bc
             -------------------------------------
             دعوة البوت لسيرفرك : ${prefix}invite
             -------------------------------------
@@ -162,8 +162,9 @@ client.on("message", async message => {
             -------------------------------------
             للعب بعبة الصراحة هناك العديد من الاسالة : ${prefix}sara7a
             -------------------------------------
+            لعبة صور العاب وانت قول إسمها  :${prefix}games
             رابط سيرفر الدعم الفني : https://discord.gg/VAdBNFH
-            FoxBot System: Owned By Wail Mahboub
+            FoxBot System **
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
