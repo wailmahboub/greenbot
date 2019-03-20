@@ -823,37 +823,6 @@ const Sra7a = [
 
 
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const prefix = "$"
-const devs = ['553319466189193248']
- 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
- 
-client.on('message', message => {
-    if (message.content.startsWith(prefix + "bot")) {
-    message.channel.send({
-        embed: new Discord.RichEmbed()
-            .setAuthor(client.user.username,client.user.avatarURL)
-            .setThumbnail(client.user.avatarURL)
-            .setColor('RANDOM')
-            .setTitle('``INFO  Alpha ©`` ')
-            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
-            .addField('``servers``', [client.guilds.size], true)
-            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
-            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
-            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
-            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
-            .addField('``My Owner ID``' , `[ <@${devs}> ]` , true)
-                  .addField('``My Prefix``' , `[ ${prefix} ]` , true)
-                  .addField('``My Language``' , `[ Java Script ]` , true)
-                  .setFooter('By | Wail Mahboub')
-    })
-}
-});
-
 
 
 
