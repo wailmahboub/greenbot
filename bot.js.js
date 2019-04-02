@@ -1305,7 +1305,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('message',async message => {
     if(message.content.startsWith("f!restart")) {
-        if(message.author.id !== "553319466189193248") return message.reply('You arent the bot owner.');
+        if(message.author.id !== "479668224649199617") return message.reply('You arent the bot owner.');
         message.channel.send('zZz').then(msg => {
             setTimeout(() => {
                msg.edit('zZzZz');
