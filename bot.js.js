@@ -1253,6 +1253,13 @@ client.on('ready', function(){
 
 
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`Welcom To Our Server 
+ ${member}  
+ `) 
+}).catch(console.error)
+})
 
 
 
