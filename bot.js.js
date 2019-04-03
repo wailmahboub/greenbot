@@ -1322,24 +1322,6 @@ client.on("guildMemberAdd", member => {
 
 
 
-const superagent = require("superagent") // تعريف بكج سوبر اجينت
-client.on('message' , async (message) => { // تعريف مسج
- if (message.content.startsWith(prefix + 'if')) { //اذا الرسالة انكتبت if
-
-let color = '36393e'  //تعريف الون ، لاتغير شيء
-
-      const { body } = await superagent //تعريف بودي
-    .get('https://yesno.wtf/api/'); //تعريف yenso api
-    if(body.answer === 'yes') color = '0x01DF01'; // اذا البودي كتب اي يجي الون اخضر
-    if(body.answer === 'no') color = '0xFF0000'; //اذا البودي كتب لا ، يجي الون أحمر
-    const embed = new Discord.RichEmbed() //ايمبد
-    .setColor(color) //
-    .setImage(`${body.image}`) //هنا يحط الصورة بـ بودي 
-    message.channel.send(`**${body.answer}**`, {embed}); //يرسل الجواب بأمبد
-
-} //تقفيله
-});  //تقفيله الكود
-
 
 
 
