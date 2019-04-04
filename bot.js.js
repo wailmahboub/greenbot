@@ -1297,6 +1297,12 @@ client.on('guildMemberAdd', member => {
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`Welcom To Our Server 
+ ░░░▒▒▒▒▒▓▓▓▒▒▒▒▒░░░
+░╔╦╦╦═╦╗╔═╦═╦══╦═╗░
+░║║║║╩╣╚╣═╣║║║║║╩╣░
+░╚══╩═╩═╩═╩═╩╩╩╩═╝░
+░░░▒▒▒▒▒▓▓▓▒▒▒▒▒░░░
+●▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬●
  ${member}  
  `) 
 }).catch(console.error)
